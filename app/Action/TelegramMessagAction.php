@@ -11,7 +11,6 @@ class TelegramMessagAction
 {
     public function send($data)
     {
-        $data =
         Mail::to('borisovnikita15@yandex.com')->send( new ContactForm($data) );
         return redirect(route('contacts'));
 
