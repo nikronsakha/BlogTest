@@ -7,12 +7,10 @@ use App\Mail\ForgotForm;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 
-class TelegramMessagAction
+class WeatherAction
 {
     public function send($data)
     {
-        Mail::to('borisovnikita15@yandex.com')->send( new ContactForm($data) );
-        return redirect(route('contacts'));
 
     }
 }
