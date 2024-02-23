@@ -26,4 +26,13 @@ class LoginRequest extends FormRequest
             'password'=> ['required'],
         ];
     }
+
+
+    public function messages()
+    {
+        return [
+            'email'=> 'Ошибка ввода' ,
+            'password'=> 'Ошибка ввода' ,
+        ];
+    }
 }
