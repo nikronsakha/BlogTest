@@ -12,6 +12,7 @@ class ContactController extends Controller
     {
         return view('main.contact');
     }
+
     public function contactsForm(ContactRequest $request, ContactMessagAction $action)
     {
         $data = $request->validated();

@@ -5,6 +5,7 @@ use App\Http\Controllers\Main\Auth\ForgotController;
 use App\Http\Controllers\Main\ContactController;
 use App\Http\Controllers\Main\IndexController;
 use App\Http\Controllers\Main\PostController;
+use App\Http\Controllers\Main\Weather\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,4 +49,9 @@ Route::group(['middleware' => 'guest'],function (){
 
 Route::get('/contacts', [ContactController::class, 'contacts'])->name('contacts');
 Route::post('/contact_form_process', [ContactController::class, 'contactsForm'])->name('contact_form_process');
+
+
+Route::get('/weather', [WeatherController::class, 'weather'])->name('weather');
+Route::post('/weather_form_process', [WeatherController::class, 'GetWeather'])->name('GetWeather');
+
 

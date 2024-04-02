@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Weather;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class WeatherRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email'=> ['required', 'email', 'string'],
-            'password'=> ['required'],
+            'city'=> ['string'],
         ];
     }
 
@@ -31,8 +30,7 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'email'=> 'Ошибка ввода' ,
-            'password'=> 'Ошибка ввода' ,
+            'city'=> 'Ошибка ввода'
         ];
     }
 }
